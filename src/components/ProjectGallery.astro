@@ -1,0 +1,97 @@
+---
+const { project } = Astro.props;
+
+const gallery = project.gallery;
+---
+
+<section class="bg-black pt-16 pb-12">
+
+  <div class="max-w-7xl mx-auto px-8 space-y-14">
+
+    {gallery[0] && (
+      <figure>
+        <img
+          src={gallery[0].image}
+          alt={project.title}
+          class="w-full object-cover transition duration-500 hover:scale-[1.01]"
+        />
+      </figure>
+    )}
+
+    {(gallery[1] || gallery[2]) && (
+      <div class="grid md:grid-cols-2 gap-8">
+
+        {gallery[1] && (
+          <figure>
+            <img
+              src={gallery[1].image}
+              alt={project.title}
+              class="w-full object-cover transition duration-500 hover:scale-[1.01]"
+            />
+          </figure>
+        )}
+
+        {gallery[2] && (
+          <figure>
+            <img
+              src={gallery[2].image}
+              alt={project.title}
+              class="w-full object-cover transition duration-500 hover:scale-[1.01]"
+            />
+          </figure>
+        )}
+
+      </div>
+    )}
+
+    {gallery[3] && (
+      <figure>
+        <img
+          src={gallery[3].image}
+          alt={project.title}
+          class="w-full object-cover transition duration-500 hover:scale-[1.01]"
+        />
+      </figure>
+    )}
+
+    {(gallery[4] || gallery[5]) && (
+      <div class="grid md:grid-cols-2 gap-8">
+
+        {gallery[4] && (
+          <figure>
+            <img
+              src={gallery[4].image}
+              alt={project.title}
+              class="w-full object-cover transition duration-500 hover:scale-[1.01]"
+            />
+          </figure>
+        )}
+
+        {gallery[5] && (
+          <figure>
+            <img
+              src={gallery[5].image}
+              alt={project.title}
+              class="w-full object-cover transition duration-500 hover:scale-[1.01]"
+            />
+          </figure>
+        )}
+
+      </div>
+    )}
+
+    {gallery[6] && (
+      <figure>
+        <img
+          src={gallery[6].image}
+          alt={project.title}
+          class="w-full object-cover transition duration-500 hover:scale-[1.01]"
+        />
+      </figure>
+    )}
+
+  </div>
+
+  
+
+</section>

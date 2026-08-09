@@ -1,0 +1,63 @@
+<section
+  id="hero"
+  class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050505] text-white"
+>
+  <div
+    id="hero-content"
+    class="mx-auto w-full max-w-[1400px] px-8 text-center transition-all duration-300"
+  >
+    <h1
+      class="hero-title font-serif text-7xl leading-[0.93] tracking-[-0.065em] md:text-[9rem] lg:text-[11rem]"
+    >
+      Santiago
+      <br />
+      Castañeda Gómez
+    </h1>
+
+    <div class="hero-meta mt-32 space-y-5">
+      <p class="text-xs uppercase tracking-[0.45em] text-neutral-300">
+        1st Assistant Camera
+      </p>
+
+      <p class="text-xs uppercase tracking-[0.45em] text-neutral-500">
+        Focus Puller
+      </p>
+
+      <p class="text-xs uppercase tracking-[0.45em] text-neutral-500">
+        Camera Department
+      </p>
+    </div>
+  </div>
+
+  <div
+    id="hero-scroll"
+    class="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center"
+  >
+    <p class="text-[10px] uppercase tracking-[0.45em] text-neutral-700">
+      Scroll
+    </p>
+
+    <div class="mt-4 h-16 w-px bg-neutral-800"></div>
+  </div>
+</section>
+
+<script type="module" src="../scripts/hero.ts"></script>
+
+<style>
+  @keyframes heroIntro {
+    from {
+      opacity: 0;
+      transform: translateY(14px) scale(0.995);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  #hero-content {
+    animation: heroIntro 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    will-change: transform, opacity;
+  }
+</style>

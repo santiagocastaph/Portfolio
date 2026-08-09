@@ -1,0 +1,52 @@
+---
+const { project } = Astro.props;
+
+const rows = [
+  { label: "Contribution", value: project.role },
+  { label: "Director", value: project.director },
+  { label: "Cinematography", value: project.dop },
+  { label: "Production", value: project.production },
+  { label: "Camera", value: project.camera },
+  { label: "Lenses", value: project.lenses || "—" },
+];
+---
+
+<section class="bg-black text-white pt-32 pb-20">
+
+  <div class="max-w-7xl mx-auto px-8">
+
+    <div class="border-t border-neutral-900">
+
+      {rows.map((row) => (
+
+        <div class="grid grid-cols-[180px_640px] justify-center gap-x-20 border-b border-neutral-900">
+
+          <div class="py-8">
+
+            <p class="uppercase tracking-[0.35em] text-xs text-neutral-500">
+
+              {row.label}
+
+            </p>
+
+          </div>
+
+          <div class="py-8 text-right">
+
+            <p class="font-serif text-xl md:text-[2rem] leading-tight">
+
+              {row.value}
+
+            </p>
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>

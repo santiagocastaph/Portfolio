@@ -1,0 +1,14 @@
+---
+const { project, className = "" } = Astro.props;
+---
+
+<a
+  href={`/work/${project.slug}`}
+  class={`group block overflow-hidden ${className}`}
+>
+  <img
+    src={project.hero}
+    alt={project.title}
+    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+  />
+</a>

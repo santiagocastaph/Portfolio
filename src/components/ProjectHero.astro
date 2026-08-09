@@ -1,0 +1,41 @@
+---
+const { project } = Astro.props;
+---
+
+<section class="relative h-[88vh] overflow-hidden bg-black">
+
+  <img
+    src={project.hero}
+    alt={project.title}
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <div class="absolute inset-0 bg-black/15"></div>
+
+  <div class="absolute bottom-32 left-0 w-full">
+
+    <div class="max-w-7xl mx-auto px-8">
+
+      <p class="uppercase tracking-[0.45em] text-xs text-neutral-300 mb-5">
+
+        {project.genre}
+
+      </p>
+
+      <h1 class="font-serif text-6xl md:text-[7.5rem] lg:text-[8rem] leading-[0.9] tracking-[-0.05em]">
+
+        {project.title}
+
+      </h1>
+
+      <p class="mt-6 uppercase tracking-[0.35em] text-xs text-neutral-400">
+
+        {project.year} · {project.type}
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
