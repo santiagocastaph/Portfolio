@@ -8,14 +8,37 @@ const { project } = Astro.props;
 
     <div class="max-w-2xl">
 
-      <h2 class="font-serif text-2xl md:text-4xl leading-tight tracking-[-0.03em]">
-        Produced for the{" "}
-        <em>{project.competition}</em>
-      </h2>
+  {project.slug === "lawless-entanglement" ? (
+  <h2 class="font-serif text-2xl md:text-4xl leading-tight tracking-[-0.03em]">
+    <em>{project.competition}</em>
+  </h2>
+) : project.slug === "kheper" ? (
+  <h2 class="font-serif text-2xl md:text-4xl leading-tight tracking-[-0.02em]">
+    Kheper is a psychological horror thriller short film Produced by Electric Milk Studio in Adelaide Australia.
+  </h2>
+) : project.slug === "i-could-hurt-a-fly" ? (
+  <h2 class="font-serif text-2xl md:text-4xl leading-tight tracking-[-0.02em]">
+    A kleptomaniac trapped in a car grapples with his sanity when he realises he is not alone.
+  </h2>
+) : project.slug === "lucid-dreaming" ? (
+  <h2 class="font-serif text-2xl md:text-4xl leading-tight tracking-[-0.02em]">
+    {project.description}
+  </h2>
+) : project.slug === "the-hunt-for-the-last-nazis" ? (
+  <h2 class="font-serif text-2xl md:text-4xl leading-tight tracking-[-0.02em]">
+    The explosive story of how Australia enabled hundreds of alleged Nazi war criminals to slink into our suburbs after WWII, and the last-ditch bid to bring them to justice.
+  </h2>
+) : (
+  <h2 class="font-serif text-2xl md:text-4xl leading-tight tracking-[-0.02em]">
+    Produced for the <em>{project.competition}</em>
+  </h2>
+)}
 
-      <p class="mt-5 uppercase tracking-[0.35em] text-xs text-neutral-500">
-        Camera Department
-      </p>
+{project.slug !== "lucid-dreaming" && (
+  <p class="mt-5 uppercase tracking-[0.35em] text-xs text-neutral-500">
+    Camera Department
+  </p>
+)}
 
     </div>
 

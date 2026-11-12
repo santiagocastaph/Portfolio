@@ -1,30 +1,105 @@
 ---
 const { project } = Astro.props;
+
+const isLawless = project.slug === "lawless-entanglement";
+const isICouldHurtAFly = project.slug === "i-could-hurt-a-fly";
+const isItemsObjects = project.slug === "items-objects-and-things";
+const isKheper = project.slug === "kheper";
+
+const isComingSoon =
+  isLawless ||
+  isICouldHurtAFly ||
+  isItemsObjects ||
+  isKheper;
+
+const vimeoUrl = project.video?.replace("/embed/", "/");
 ---
 
 {
-  project.video && (
-
+  (project.video || isComingSoon) && (
     <section class="bg-black pt-8 pb-24 border-t border-neutral-900 border-b border-neutral-900">
 
       <div class="max-w-5xl mx-auto px-8">
 
         <div class="aspect-video overflow-hidden bg-neutral-950">
 
-          <iframe
-            class="w-full h-full"
-            src={project.video}
-            title={project.title}
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          {isComingSoon ? (
+
+            isLawless ? (
+
+              <a
+                href={vimeoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative block w-full h-full"
+                aria-label={`Watch ${project.title} on Vimeo`}
+              >
+
+                <img
+                  src="/films/lawless-entanglement/video-preview.jpg"
+                  alt={project.title}
+                  class="w-full h-full object-contain transition duration-700 group-hover:scale-[1.01] group-hover:opacity-80"
+                />
+
+                <div class="absolute inset-0 flex items-center justify-center bg-black/20 transition duration-500 group-hover:bg-black/30">
+                  <div class="text-center">
+                    <p class="uppercase tracking-[0.5em] text-[10px] text-white">
+                      Coming Soon
+                    </p>
+
+                    <div class="w-8 h-px bg-white/50 mx-auto mt-4 transition-all duration-500 group-hover:w-12"></div>
+                  </div>
+                </div>
+
+              </a>
+
+            ) : (
+
+              <div class="relative block w-full h-full">
+
+                <img
+                  src={project.hero}
+                  alt={project.title}
+                  class={`w-full h-full ${
+                    isKheper ? "object-cover" : "object-contain"
+                  }`}
+                />
+
+                <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+
+                  <div class="text-center">
+
+                    <p class="uppercase tracking-[0.5em] text-[10px] text-white">
+                      Coming Soon
+                    </p>
+
+                    <div class="w-8 h-px bg-white/50 mx-auto mt-4"></div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            )
+
+          ) : (
+
+            <iframe
+              class="w-full h-full"
+              src={project.video}
+              title={project.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+          )}
 
         </div>
 
       </div>
 
     </section>
-
   )
 }

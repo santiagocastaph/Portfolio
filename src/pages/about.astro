@@ -1,57 +1,339 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
 ---
 
 <Layout title="About | Santiago Castañeda Gomez">
 
-  <Navbar />
+  <main class="bg-black text-white">
 
-  <section class="bg-black text-white min-h-screen pt-40 pb-32">
+<!-- ========================================= -->
+<!-- INTRO -->
+<!-- ========================================= -->
 
-    <div class="max-w-5xl mx-auto px-8">
+<section class="min-h-screen pt-36 pb-24 px-8">
+  <div class="max-w-[1500px] mx-auto">
 
-      <p class="uppercase tracking-[0.45em] text-xs text-neutral-500 mb-10">
-        About
-      </p>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-start">
 
-      <h1 class="font-serif text-6xl md:text-8xl leading-[0.95] tracking-[-0.05em]">
+      <!-- LEFT -->
+      <div class="lg:col-span-4 lg:pt-20">
 
-        Precision behind the camera.
-
-        <br />
-
-        Curiosity behind every story.
-
-      </h1>
-
-      <div class="mt-24 max-w-3xl space-y-8 text-xl leading-relaxed text-neutral-300">
-
-        <p>
-
-          I'm a 1st Assistant Camera based in Adelaide, Australia,
-          with a background in photography, journalism and screen production.
-
+        <p class="uppercase tracking-[0.45em] text-[10px] text-neutral-500 mb-7">
+          About
         </p>
 
-        <p>
+        <h1
+          class="font-serif text-6xl md:text-8xl lg:text-[6.5rem] leading-[0.86] tracking-[-0.055em]"
+        >
+          Santiago<br />
+          Castañeda
+          Gómez
+        </h1>
 
-          My work is driven by technical precision, collaboration and
-          a deep appreciation for visual storytelling.
+        <div class="mt-10 space-y-3">
 
+          <p class="uppercase tracking-[0.4em] text-[11px] text-neutral-300">
+            1st AC / Focus Puller
+          </p>
+
+          <p class="uppercase tracking-[0.4em] text-[11px] text-neutral-500">
+            Camera Department
+          </p>
+
+        </div>
+
+        <p class="mt-20 uppercase tracking-[0.45em] text-[10px] text-neutral-500">
+          Adelaide, Australia
         </p>
 
-        <p>
+      </div>
 
-          Whether working on narrative films, documentaries or commercial
-          productions, I believe every frame deserves the same level of care.
 
-        </p>
+      <!-- RIGHT / SET PHOTOGRAPHS -->
+      <div class="lg:col-span-8">
+
+        <div class="border border-white/8 p-2.5">
+
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2.5">
+
+            <!-- 01 -->
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="about/about-01.jpg"
+                alt="Santiago Castañeda on set"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- 02 -->
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="about/about-02.jpg"
+                alt="Santiago Castañeda working with camera equipment"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- 03 -->
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="about/about-03.jpg"
+                alt="Santiago Castañeda operating camera"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- 04 -->
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="about/about-04.jpg"
+                alt="Film set"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- 05 -->
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="about/about-05.jpg"
+                alt="Camera department on location"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- 06 -->
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="about/about-06.jpg"
+                alt="Film production on set"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- 07 -->
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="about/about-07.jpg"
+                alt="Camera operation"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- 08 -->
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="about/about-08.jpg"
+                alt="Camera crew on set"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- 09 -->
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="about/about-09.jpg"
+                alt="Santiago Castañeda working on set"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+</section>
+
+
+
+
+    <!-- ========================================= -->
+    <!-- SELECTED CREDITS -->
+    <!-- ========================================= -->
+
+    <section class="border-t border-white/15">
+
+      <div class="max-w-[1500px] mx-auto px-8 py-7">
+
+        <div class="flex items-end justify-between mb-7">
+
+          <div>
+            <h2 class="font-serif text-4xl md:text-7xl tracking-[-0.04em]">
+              Selected Credits
+            </h2>
+          </div>
+
+          <a
+            href="/credits"
+            class="uppercase tracking-[0.28em] text-sm text-neutral-400 hover:text-white transition"
+          >
+            View Full Credits →
+          </a>
+
+        </div>
+
+
+        <div class="border-t border-white/20">
+
+          <!-- CREDIT -->
+          <a
+            href="/work/the-hunt-for-the-last-nazis"
+            class="grid grid-cols-12 gap-4 py-6 border-b border-white/10 hover:text-neutral-400 transition"
+          >
+            <span class="col-span-2 md:col-span-1 text-[10px] text-neutral-500">
+              2026
+            </span>
+
+            <span class="col-span-6 md:col-span-5 text-sm uppercase tracking-[0.18em]">
+              The Hunt for the Last Nazis
+            </span>
+
+            <span class="col-span-4 md:col-span-3 text-[10px] uppercase tracking-[0.18em] text-neutral-500">
+              Camera Assistant
+            </span>
+
+            <span class="hidden md:block md:col-span-3 text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
+              SBS Documentary
+            </span>
+          </a>
+
+
+          <a
+            href="/work/kheper"
+            class="grid grid-cols-12 gap-4 py-6 border-b border-white/10 hover:text-neutral-400 transition"
+          >
+            <span class="col-span-2 md:col-span-1 text-[10px] text-neutral-500">
+              2025
+            </span>
+
+            <span class="col-span-6 md:col-span-5 text-sm uppercase tracking-[0.18em]">
+              Kheper
+            </span>
+
+            <span class="col-span-4 md:col-span-3 text-[10px] uppercase tracking-[0.18em] text-neutral-500">
+              1st Assistant Camera
+            </span>
+
+            <span class="hidden md:block md:col-span-3 text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
+              Short Film
+            </span>
+          </a>
+
+<a
+  href="/work/lawless-entanglement"
+  class="grid grid-cols-12 gap-4 py-6 border-b border-white/10 hover:text-neutral-400 transition"
+>
+  <span class="col-span-2 md:col-span-1 text-[10px] text-neutral-500">
+    2025
+  </span>
+
+  <span class="col-span-6 md:col-span-5 text-sm uppercase tracking-[0.18em]">
+    Lawless Entanglement
+  </span>
+
+  <span class="col-span-4 md:col-span-3 text-[10px] uppercase tracking-[0.18em] text-neutral-500">
+    1st Camera Assistant
+  </span>
+
+  <span class="hidden md:block md:col-span-3 text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
+    Short Film
+  </span>
+</a>
+
+          <a
+            href="/work/pact-lunch"
+            class="grid grid-cols-12 gap-4 py-6 border-b border-white/10 hover:text-neutral-400 transition"
+          >
+            <span class="col-span-2 md:col-span-1 text-[10px] text-neutral-500">
+              2025
+            </span>
+
+            <span class="col-span-6 md:col-span-5 text-sm uppercase tracking-[0.18em]">
+              Pact Lunch
+            </span>
+
+            <span class="col-span-4 md:col-span-3 text-[10px] uppercase tracking-[0.18em] text-neutral-500">
+              1st AC / Clapper Loader
+            </span>
+
+            <span class="hidden md:block md:col-span-3 text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
+              Short Film
+            </span>
+          </a>
+
+
+          <a
+            href="/work/odysseed"
+            class="grid grid-cols-12 gap-4 py-6 border-b border-white/10 hover:text-neutral-400 transition"
+          >
+            <span class="col-span-2 md:col-span-1 text-[10px] text-neutral-500">
+              2025
+            </span>
+
+            <span class="col-span-6 md:col-span-5 text-sm uppercase tracking-[0.18em]">
+              Odysseed
+            </span>
+
+            <span class="col-span-4 md:col-span-3 text-[10px] uppercase tracking-[0.18em] text-neutral-500">
+              Director of Photography
+            </span>
+
+            <span class="hidden md:block md:col-span-3 text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
+              Short Film
+            </span>
+          </a>
+
+        </div>
+
+
+        <div class="mt-8 md:hidden">
+          <a
+            href="/credits"
+            class="uppercase tracking-[0.35em] text-[10px] text-neutral-500 hover:text-white transition"
+          >
+            View Full Credits →
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+ <!-- ========================================= -->
+<!-- STATEMENT -->
+<!-- ========================================= -->
+
+<section class="border-t border-white/15">
+  <div class="max-w-[1500px] mx-auto px-8 py-20 md:py-24">
+
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-20 items-start">
+
+    <!-- PRIMARY STATEMENT -->
+    <div class="md:col-span-7">
+      <p class="font-serif text-4xl md:text-[3.8rem] lg:text-[4rem] leading-[0.98] tracking-[-0.04em]">
+        I work in the camera department, primarily as a 1st AC / Focus Puller,
+        with a background in cinematography, photojournalism and media.
+      </p>
+    </div>
+
+    <!-- CREATIVE STATEMENT -->
+    <div class="md:col-span-5 md:pt-6 lg:pt-8">
+      <p class="font-serif text-2xl md:text-[2.1rem] lg:text-[2.2rem] leading-[1.05] tracking-[-0.025em]">
+        I believe in making art that means something to someone. 
+      </p>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+  </main>
 
 </Layout>

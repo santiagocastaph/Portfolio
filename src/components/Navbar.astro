@@ -1,46 +1,141 @@
-<nav class="fixed top-0 left-0 w-full z-50">
+---
+const navItems = [
+  { label: "Motion", href: "/motion" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+---
 
+<nav class="fixed top-0 left-0 w-full z-50">
   <div class="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
 
+    <!-- LOGO -->
     <a
       href="/"
-      class="font-serif text-base tracking-[0.18em] text-white transition duration-300 hover:opacity-60"
+      class="relative z-[60] font-serif text-base tracking-[0.18em] text-white transition duration-300 hover:opacity-60"
     >
       SCG
     </a>
 
-    <div class="flex items-center gap-10">
+    <!-- DESKTOP NAV -->
+    <div class="hidden md:flex items-center gap-10">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="uppercase text-[11px] tracking-[0.35em] text-neutral-400 transition duration-300 hover:text-white"
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
 
-      <a
-        href="/motion"
-        class="uppercase text-[11px] tracking-[0.35em] text-neutral-400 transition duration-300 hover:text-white"
-      >
-        Motion
-      </a>
+    <!-- MOBILE MENU BUTTON -->
+    <button
+      type="button"
+      class="relative z-[60] flex md:hidden w-8 h-8 items-center justify-center"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-button
+    >
+      <span class="sr-only">Open menu</span>
 
-      <a
-        href="/photography"
-        class="uppercase text-[11px] tracking-[0.35em] text-neutral-400 transition duration-300 hover:text-white"
-      >
-        Photography
-      </a>
+      <span class="flex flex-col gap-[5px] w-5">
+        <span class="block h-px w-full bg-white"></span>
+        <span class="block h-px w-full bg-white"></span>
+      </span>
+    </button>
 
-      <a
-        href="/about"
-        class="uppercase text-[11px] tracking-[0.35em] text-neutral-400 transition duration-300 hover:text-white"
-      >
-        About
-      </a>
+    <!-- MOBILE NAV -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-50 bg-black opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+      aria-hidden="true"
+      data-mobile-menu
+    >
+      <div class="h-full flex flex-col justify-center px-8">
 
-      <a
-        href="/contact"
-        class="uppercase text-[11px] tracking-[0.35em] text-neutral-400 transition duration-300 hover:text-white"
-      >
-        Contact
-      </a>
+        <div class="flex flex-col">
+          {navItems.map((item, index) => (
+            <a
+              href={item.href}
+              class="flex items-baseline justify-between border-b border-white/10 py-6 text-white transition-opacity duration-300 hover:opacity-50"
+              data-mobile-link
+            >
+              <span class="font-serif text-4xl tracking-[-0.03em]">
+                {item.label}
+              </span>
 
+              <span class="text-[10px] uppercase tracking-[0.25em] text-neutral-500">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            </a>
+          ))}
+        </div>
+
+      </div>
     </div>
 
   </div>
-
 </nav>
+
+<script>
+  const setupMobileMenu = () => {
+    const menuButton = document.querySelector("[data-menu-button]");
+    const mobileMenu = document.querySelector("[data-mobile-menu]");
+    const mobileLinks = document.querySelectorAll("[data-mobile-link]");
+
+    if (!menuButton || !mobileMenu) return;
+
+    const openMenu = () => {
+      mobileMenu.classList.remove("opacity-0", "pointer-events-none");
+      mobileMenu.classList.add("opacity-100");
+
+      mobileMenu.setAttribute("aria-hidden", "false");
+      menuButton.setAttribute("aria-expanded", "true");
+      menuButton.setAttribute("aria-label", "Close menu");
+
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeMenu = () => {
+      mobileMenu.classList.remove("opacity-100");
+      mobileMenu.classList.add("opacity-0", "pointer-events-none");
+
+      mobileMenu.setAttribute("aria-hidden", "true");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open menu");
+
+      document.body.style.overflow = "";
+    };
+
+    const toggleMenu = () => {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    };
+
+    menuButton.addEventListener("click", toggleMenu);
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+  };
+
+  setupMobileMenu();
+
+  document.addEventListener("astro:page-load", setupMobileMenu);
+</script>

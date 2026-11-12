@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const credits = [
+  
+  { year: 2026, production: "IKU", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2026, production: "Peter Drew - Aussie Posters Video", role: "Camera Assistant", type: "Promo video" },
+  { year: 2026, production: "The Seed", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2026, production: "Cleanup on Aisle One", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2026, production: "Cunt", role: "Director of Photography", type: "Short Film" },
+  { year: 2026, production: "Beasties", role: "2nd Camera Assistant", type: "Short Film" },
+  { year: 2026, production: "My Kitchen Rules - Adelaide Episode", role: "Camera Assistant", type: "TV Show" },
+  { year: 2026, production: "Grief and Other Pains", role: "Director of Photography", type: "Short Film" },
+  { year: 2026, production: "Real State Comercial", role: "2nd Camera Assistant", type: "TVC" },
+  { year: 2026, production: "Best Thing Since Sliced Bread", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2026, production: "The Killing of Flopsy", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2026, production: "SEIMA", role: "Camera Operator", type: "Corporate Video" },
+  { year: 2026, production: "Department of Environment and Water SA", role: "1st Camera Assistant", type: "Short Documentary" },
+  { year: 2026, production: "Cold Like Snow", role: "Director of Photography", type: "Short Film" },
+  { year: 2025, production: "Will She Say Yes?", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2025, production: "Odysseed", role: "Cinematographer", type: "Short Film" },
+  { year: 2025, production: "Astray", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2025, production: "SBS: The Hunt of The Last Nazis", role: "Camera Assistant / Camera Operator", type: "Documentary" },
+  { year: 2025, production: "Monteperle Wines", role: "2nd Camera Assistant", type: "TVC" },
+  { year: 2025, production: "Items Objects and Things", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2025, production: "Tone Deaf Princess", role: "Cinematographer", type: "Short Film" },
+  { year: 2025, production: "Lawless Entanglement", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2025, production: "DROP", role: "Director of Photography", type: "Short Film" },
+  { year: 2025, production: "Keepher", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2025, production: "Terra Axis – Cardinal Sin", role: "Co-Cinematographer", type: "Music Video" },
+  { year: 2025, production: "PRINT", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2025, production: "Pact Lunch", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2025, production: "An Incomplete Encyclopedia of Hugs", role: "Gaffer", type: "Short Film" },
+  { year: 2024, production: "Planet Caravan", role: "1st & 2nd Camera Assistant", type: "Feature Film" },
+  { year: 2024, production: "The Last Motif", role: "Director", type: "Short Film" },
+  { year: 2024, production: "10 Years Apart", role: "Cinematographer", type: "Short Film" },
+  { year: 2024, production: "I Name My Dildo Humphrey Boat", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2024, production: "Cigarettes and Bubblegum", role: "Cinematographer", type: "Short Film" },
+  { year: 2024, production: "Xiangyunsha", role: "Co-Cinematographer", type: "Documentary" },
+  { year: 2024, production: "Dancing Dragon", role: "2nd Camera Assistant", type: "Feature Film" },
+  { year: 2024, production: "Echoes", role: "Cinematographer", type: "Short Film" },
+  { year: 2023, production: "Club Rules", role: "Co-Cinematographer", type: "TV Pilot" },
+  { year: 2023, production: "I Could Hurt a Fly", role: "1st Camera Assistant", type: "Short Film" },
+  { year: 2023, production: "Lucid Dreams", role: "Camera Operator", type: "Feature Film" },
+  { year: 2020, production: "Shang-Chi and the Legend of the Ten Rings", role: "Swing Gang – Dec Set", type: "Feature Film" },
+];
+
+const years = [...new Set(credits.map((credit) => credit.year))];
+---
+
+<Layout title="Credits | Santiago Castañeda Gomez">
+  <main class="min-h-screen bg-black text-white">
+    <section class="px-8 pt-36 pb-24">
+      <div class="mx-auto max-w-[1500px]">
+        <div class="flex items-end justify-between border-b border-white/15 pb-8">
+          <div>
+            <p class="mb-5 uppercase tracking-[0.45em] text-[20px] text-neutral-500">Credits</p>
+            <h1 class="font-serif text-4xl leading-none tracking-[-0.045em] md:text-5xl">Selected work</h1>
+          </div>
+          <a href="/about" class="hidden uppercase tracking-[0.35em] text-[10px] text-neutral-500 transition hover:text-white md:block">About →</a>
+        </div>
+
+        <div class="mt-5">
+          <div class="hidden grid-cols-12 gap-4 border-b border-white/10 pb-5 md:grid">
+            <span class="col-span-1 uppercase tracking-[0.3em] text-[12px] text-neutral-500">Year</span>
+            <span class="col-span-5 uppercase tracking-[0.3em] text-[12px] text-neutral-500">Production</span>
+            <span class="col-span-3 uppercase tracking-[0.3em] text-[12px] text-neutral-500">Role</span>
+            <span class="col-span-3 text-right uppercase tracking-[0.3em] text-[12px] text-neutral-500">Type</span>
+          </div>
+
+          {years.map((year) => (
+            <div class="pt-10" key={year}>
+              <div class="pb-3">
+                <p class="font-serif text-2xl tracking-[-0.02em]">{year}</p>
+              </div>
+
+              <div class="border-b border-white/10">
+                {credits.filter((credit) => credit.year === year).map((credit) => (
+                  <div class="grid grid-cols-12 gap-3 border-t border-white/10 py-5 md:gap-4" key={`${credit.year}-${credit.production}`}>
+                    <span class="hidden text-xs text-neutral-500 md:col-span-1 md:block">{credit.year}</span>
+                    <span class="col-span-12 text-sm md:col-span-5">{credit.production}</span>
+                    <span class="col-span-7 text-xs text-neutral-400 md:col-span-3">{credit.role}</span>
+                    <span class="col-span-5 text-right text-xs text-neutral-500 md:col-span-3">{credit.type}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 md:hidden">
+          <a href="/about" class="uppercase tracking-[0.35em] text-[10px] text-neutral-500 transition hover:text-white">← About</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
