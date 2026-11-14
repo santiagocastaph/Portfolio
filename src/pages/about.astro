@@ -59,12 +59,51 @@ import Layout from "../layouts/Layout.astro";
 </section>
 
 <style>
-  .about-editorial { display: grid !important; grid-template-columns: 150px minmax(0, 42fr) minmax(0, 58fr) !important; padding: 60px 60px 60px 0 !important; column-gap: 56px; box-sizing: border-box; }
-  .about-photo { position: sticky; top: 40px; align-self: start; height: calc(100vh - 80px); min-height: calc(100vh - 80px); grid-column: 2; margin: 0 !important; width: 100% !important; }
-  .about-photo img { object-position: 54% center; }\n  .about-copy { grid-column: 3; }
+  .about-editorial {
+    display: grid !important;
+    grid-template-columns: 150px minmax(0, 42fr) minmax(0, 58fr) !important;
+    padding: 60px 60px 60px 0 !important;
+    column-gap: 56px;
+    box-sizing: border-box;
+  }
+  .about-editorial::before {
+    content: "";
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    background: #000;
+  }
+  .about-photo {
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    grid-column: 2;
+    grid-row: 1;
+    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  .about-copy { grid-column: 3; grid-row: 1; }
+  .about-photo img { object-position: 54% center; }
   @media (max-width: 767px) {
-    .about-editorial { grid-template-columns: minmax(0, 1fr) !important; padding: 0 !important; column-gap: 0; }\n    .about-copy { grid-column: 1; }
-    .about-photo { position: relative; top: auto; height: 52svh; min-height: 52svh; margin: 0 !important; width: 100% !important; }
+    .about-editorial {
+      grid-template-columns: minmax(0, 1fr) !important;
+      padding: 0 !important;
+      column-gap: 0;
+    }
+    .about-editorial::before { display: none; }
+    .about-photo {
+      position: relative;
+      top: auto;
+      grid-column: 1;
+      grid-row: 1;
+      height: 52svh;
+      min-height: 52svh;
+      margin: 0 !important;
+      width: 100% !important;
+    }
+    .about-copy { grid-column: 1; grid-row: 2; }
   }
 </style>
 
