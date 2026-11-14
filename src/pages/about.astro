@@ -8,7 +8,7 @@ import Layout from "../layouts/Layout.astro";
 
 <!-- ========================================= -->
 <!-- ABOUT EDITORIAL LAYOUT -->
-<section class="about-editorial border-b border-white/15" style="display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);">
+<section class="about-editorial border-b border-white/15" style="display:grid;grid-template-columns:150px minmax(0,42fr) minmax(0,58fr);">
   <div class="about-photo relative min-h-[52svh] md:min-h-[calc(100vh-72px)] bg-black overflow-hidden">
     <img
       src="/about/about-02.jpg"
@@ -59,11 +59,11 @@ import Layout from "../layouts/Layout.astro";
 </section>
 
 <style>
-  .about-editorial { display: grid !important; grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important; padding: 60px 60px 60px 150px !important; column-gap: 56px; box-sizing: border-box; }
-  .about-photo { position: sticky; top: 40px; align-self: start; height: calc(100vh - 80px); min-height: calc(100vh - 80px); margin-left: 150px !important; width: calc(100% - 150px) !important; }
-  .about-photo img { object-position: 54% center; }
+  .about-editorial { display: grid !important; grid-template-columns: 150px minmax(0, 42fr) minmax(0, 58fr) !important; padding: 60px 60px 60px 0 !important; column-gap: 56px; box-sizing: border-box; }
+  .about-photo { position: sticky; top: 40px; align-self: start; height: calc(100vh - 80px); min-height: calc(100vh - 80px); grid-column: 2; margin: 0 !important; width: 100% !important; }
+  .about-photo img { object-position: 54% center; }\n  .about-copy { grid-column: 3; }
   @media (max-width: 767px) {
-    .about-editorial { grid-template-columns: minmax(0, 1fr) !important; padding: 0; column-gap: 0; }
+    .about-editorial { grid-template-columns: minmax(0, 1fr) !important; padding: 0 !important; column-gap: 0; }\n    .about-copy { grid-column: 1; }
     .about-photo { position: relative; top: auto; height: 52svh; min-height: 52svh; margin: 0 !important; width: 100% !important; }
   }
 </style>
