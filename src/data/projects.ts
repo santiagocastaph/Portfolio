@@ -1023,12 +1023,12 @@ gallery: [
     role: "1st Camera Assistant",
     description: "",
 
-    director: "",
-    dop: "",
-    production: "",
+    director: "Ben Gall",
+    dop: "Patrick Prior",
+    production: "Tiger Studios & Blue Lime Films",
 
-    camera: "",
-    lenses: "",
+    camera: "Blackmagic Ursa Mini Pro G2",
+    lenses: "ARRI Ultra Primes",
 
     duration: "",
     location: "",
