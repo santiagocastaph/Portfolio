@@ -1010,6 +1010,44 @@ gallery: [
       instagram: "",
     },
   },
+  {
+    slug: "astray",
+    title: "Astray",
+    order: 6,
+
+    year: 2025,
+    type: "Narrative Short Film",
+    genre: "",
+    competition: "",
+
+    role: "1st Camera Assistant",
+    description: "",
+
+    director: "",
+    dop: "",
+    production: "",
+
+    camera: "",
+    lenses: "",
+
+    duration: "",
+    location: "",
+    status: "",
+
+    hero: "/films/astray/hero.jpg",
+
+    gallery: [],
+    behindTheScenes: [],
+    festivals: [],
+    awards: [],
+    video: "",
+
+    links: {
+      imdb: "",
+      trailer: "",
+      instagram: "",
+    },
+  },
 ];
 
 
