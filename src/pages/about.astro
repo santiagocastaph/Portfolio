@@ -7,196 +7,65 @@ import Layout from "../layouts/Layout.astro";
   <main class="bg-black text-white">
 
 <!-- ========================================= -->
-<!-- CINEMATIC PORTRAIT -->
-<!-- ========================================= -->
+<!-- ABOUT EDITORIAL LAYOUT -->
+<section class="about-editorial grid grid-cols-1 md:grid-cols-[42%_58%] border-b border-white/15">
+  <div class="about-photo relative min-h-[52svh] md:min-h-[calc(100vh-72px)] bg-black overflow-hidden">
+    <img
+      src="/about/about-02.jpg"
+      alt="Santiago Castañeda operating a cinema camera"
+      class="absolute inset-0 h-full w-full object-cover"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15"></div>
+    <span class="absolute bottom-5 left-5 md:bottom-8 md:left-8 text-[9px] uppercase tracking-[0.28em] text-white/65">On set · Adelaide</span>
+  </div>
 
-<section class="about-portrait relative min-h-[66svh] md:min-h-[76svh] overflow-hidden bg-black">
-  <img
-    src="/about/about-02.jpg"
-    alt="Santiago Castañeda operating a cinema camera"
-    class="about-portrait-image absolute inset-0 h-full w-full object-cover"
-    fetchpriority="high"
-  />
-  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/25"></div>
-
-  <div class="relative z-10 flex min-h-[66svh] md:min-h-[76svh] flex-col justify-between px-6 py-6 md:px-8 md:py-8 lg:px-8">
-    <div class="flex justify-between items-start">
-      <p class="uppercase tracking-[0.3em] text-[10px] text-white/70">About</p>
-      <p class="text-right uppercase tracking-[0.2em] text-[9px] md:text-[10px] leading-relaxed text-white/60">
-        Adelaide, Australia<br />Camera Department
-      </p>
+  <div class="about-copy flex flex-col px-6 py-8 md:px-10 lg:px-14 md:py-10">
+    <div class="flex justify-between items-start mb-14 md:mb-16">
+      <span class="text-[10px] uppercase tracking-[0.3em] text-neutral-500">About</span>
+      <span class="text-right text-[9px] md:text-[10px] uppercase tracking-[0.2em] leading-relaxed text-neutral-500">Adelaide, Australia<br/>Camera Department</span>
     </div>
 
-    <div class="max-w-[1050px]">
-      <p class="mb-3 md:mb-4 uppercase tracking-[0.28em] text-[10px] md:text-xs text-white/70">1st AC / Focus Puller</p>
-      <h1 class="font-serif text-[clamp(2.8rem,6.3vw,6.5rem)] leading-[0.88] tracking-[-0.055em]">
-        Santiago<br class="md:hidden" /> Castañeda Gómez
-      </h1>
-      <p class="mt-4 md:mt-5 text-xs md:text-sm text-white/70">Cinematography · Camera Assistant · Focus Puller</p>
+    <div class="mb-12 md:mb-14">
+      <p class="mb-4 text-[10px] uppercase tracking-[0.28em] text-neutral-500">1st AC / Focus Puller</p>
+      <h1 class="font-serif text-[clamp(2.8rem,5vw,5.8rem)] leading-[0.88] tracking-[-0.055em]">Santiago<br/>Castañeda Gómez</h1>
+      <p class="mt-5 max-w-sm text-xs md:text-sm leading-relaxed text-neutral-400">Cinematography · Camera Assistant · Focus Puller</p>
+    </div>
+
+    <div class="mt-auto">
+      <div class="flex items-end justify-between gap-4 mb-5 border-b border-white/20 pb-4">
+        <h2 class="font-serif text-3xl md:text-4xl tracking-[-0.04em]">Selected Credits</h2>
+        <a href="/credits" class="shrink-0 text-[9px] uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition">All credits ↗</a>
+      </div>
+
+      <div class="divide-y divide-white/10">
+        <a href="/work/the-hunt-for-the-last-nazis" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-4 hover:text-neutral-400 transition">
+          <span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">The Hunt for the Last Nazis</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant · SBS Documentary</span></span>
+        </a>
+        <a href="/work/kheper" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-4 hover:text-neutral-400 transition">
+          <span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Kheper</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Assistant Camera · Short Film</span></span>
+        </a>
+        <a href="/work/lawless-entanglement" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-4 hover:text-neutral-400 transition">
+          <span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Lawless Entanglement</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span>
+        </a>
+        <a href="/work/pact-lunch" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-4 hover:text-neutral-400 transition">
+          <span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Pact Lunch</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st AC / Clapper Loader · Short Film</span></span>
+        </a>
+        <a href="/work/odysseed" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-4 hover:text-neutral-400 transition">
+          <span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Odysseed</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Director of Photography · Short Film</span></span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .about-portrait-image { object-position: 55% center; }
   @media (min-width: 768px) {
-    .about-portrait-image { object-position: center 42%; }
+    .about-photo { min-height: calc(100vh - 72px); }
+    .about-photo img { object-position: 54% center; }
   }
 </style>
 
-<!-- SELECTED CREDITS -->
-    <!-- ========================================= -->
-
-    <section class="border-t border-white/15">
-
-      <div class="max-w-[1500px] mx-auto px-8 py-7">
-
-        <div class="flex items-end justify-between mb-7">
-
-          <div>
-            <h2 class="font-serif text-4xl md:text-7xl tracking-[-0.04em]">
-              Selected Credits
-            </h2>
-          </div>
-
-          <a
-            href="/credits"
-            class="uppercase tracking-[0.28em] text-sm text-neutral-400 hover:text-white transition"
-          >
-            View Full Credits →
-          </a>
-
-        </div>
-
-
-        <div class="border-t border-white/20">
-
-          <!-- CREDIT -->
-          <a
-            href="/work/the-hunt-for-the-last-nazis"
-            class="selected-credit-row grid gap-x-4 gap-y-2 py-4 md:py-6 border-b border-white/10 hover:text-neutral-400 transition"
-          >
-            <span class="credit-year text-[10px] text-neutral-500">
-              2026
-            </span>
-
-            <span class="credit-title min-w-0 break-words text-sm uppercase tracking-[0.18em]">
-              The Hunt for the Last Nazis
-            </span>
-
-            <span class="credit-role min-w-0 break-words text-[10px] uppercase tracking-[0.18em] text-neutral-500">
-              Camera Assistant
-            </span>
-
-            <span class="credit-type hidden md:block text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
-              SBS Documentary
-            </span>
-          </a>
-
-
-          <a
-            href="/work/kheper"
-            class="selected-credit-row grid gap-x-4 gap-y-2 py-4 md:py-6 border-b border-white/10 hover:text-neutral-400 transition"
-          >
-            <span class="credit-year text-[10px] text-neutral-500">
-              2025
-            </span>
-
-            <span class="credit-title min-w-0 break-words text-sm uppercase tracking-[0.18em]">
-              Kheper
-            </span>
-
-            <span class="credit-role min-w-0 break-words text-[10px] uppercase tracking-[0.18em] text-neutral-500">
-              1st Assistant Camera
-            </span>
-
-            <span class="credit-type hidden md:block text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
-              Short Film
-            </span>
-          </a>
-
-<a
-  href="/work/lawless-entanglement"
-  class="selected-credit-row grid gap-x-4 gap-y-2 py-4 md:py-6 border-b border-white/10 hover:text-neutral-400 transition"
->
-  <span class="credit-year text-[10px] text-neutral-500">
-    2025
-  </span>
-
-  <span class="credit-title min-w-0 break-words text-sm uppercase tracking-[0.18em]">
-    Lawless Entanglement
-  </span>
-
-  <span class="credit-role min-w-0 break-words text-[10px] uppercase tracking-[0.18em] text-neutral-500">
-    1st Camera Assistant
-  </span>
-
-  <span class="credit-type hidden md:block text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
-    Short Film
-  </span>
-</a>
-
-          <a
-            href="/work/pact-lunch"
-            class="selected-credit-row grid gap-x-4 gap-y-2 py-4 md:py-6 border-b border-white/10 hover:text-neutral-400 transition"
-          >
-            <span class="credit-year text-[10px] text-neutral-500">
-              2025
-            </span>
-
-            <span class="credit-title min-w-0 break-words text-sm uppercase tracking-[0.18em]">
-              Pact Lunch
-            </span>
-
-            <span class="credit-role min-w-0 break-words text-[10px] uppercase tracking-[0.18em] text-neutral-500">
-              1st AC / Clapper Loader
-            </span>
-
-            <span class="credit-type hidden md:block text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
-              Short Film
-            </span>
-          </a>
-
-
-          <a
-            href="/work/odysseed"
-            class="selected-credit-row grid gap-x-4 gap-y-2 py-4 md:py-6 border-b border-white/10 hover:text-neutral-400 transition"
-          >
-            <span class="credit-year text-[10px] text-neutral-500">
-              2025
-            </span>
-
-            <span class="credit-title min-w-0 break-words text-sm uppercase tracking-[0.18em]">
-              Odysseed
-            </span>
-
-            <span class="credit-role min-w-0 break-words text-[10px] uppercase tracking-[0.18em] text-neutral-500">
-              Director of Photography
-            </span>
-
-            <span class="credit-type hidden md:block text-right text-[10px] uppercase tracking-[0.18em] text-neutral-600">
-              Short Film
-            </span>
-          </a>
-
-        </div>
-
-
-        <div class="mt-8 md:hidden">
-          <a
-            href="/credits"
-            class="uppercase tracking-[0.35em] text-[10px] text-neutral-500 hover:text-white transition"
-          >
-            View Full Credits →
-          </a>
-        </div>
-
-      </div>
-
-    </section>
-
-
- <!-- ========================================= -->
 <!-- STATEMENT -->
 <!-- ========================================= -->
 
