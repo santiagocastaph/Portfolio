@@ -21,13 +21,13 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
   <div class="about-copy flex flex-col justify-start px-7 py-9 md:px-12 lg:px-16 xl:px-20 md:py-10">
-    <div class="mt-0">
+    <div class="mt-0 flex flex-col md:flex-1">
       <div class="flex items-end justify-between gap-4 mb-4 border-b border-white/20 pb-3">
         <h2 class="font-serif text-3xl md:text-[2.15rem] tracking-[-0.04em]">Selected Credits</h2>
         <a href="/credits" class="shrink-0 text-[9px] uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition">View filmography ↗</a>
       </div>
 
-      <div class="divide-y divide-white/10">
+      <div class="divide-y divide-white/10 md:flex md:flex-1 md:flex-col md:justify-between">
         <a href="/work/the-hunt-for-the-last-nazis" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-3.5 hover:text-neutral-300 transition">
           <span class="text-[10px] tabular-nums text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">The Hunt for the Last Nazis</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant · SBS Documentary</span></span>
         </a>
@@ -74,7 +74,7 @@ import Layout from "../layouts/Layout.astro";
     margin: 0 !important;
     width: 100% !important;
   }
-  .about-copy { grid-column: 3; grid-row: 1; }
+  .about-copy { grid-column: 3; grid-row: 1; min-height: calc(100vh - 80px); }
   .about-photo img { object-position: 35% center; }
   @media (max-width: 767px) {
     .about-editorial {
@@ -93,7 +93,7 @@ import Layout from "../layouts/Layout.astro";
       margin: 0 !important;
       width: 100% !important;
     }
-    .about-copy { grid-column: 1; grid-row: 2; }
+    .about-copy { grid-column: 1; grid-row: 2; min-height: auto; }
   }
 </style>
 
