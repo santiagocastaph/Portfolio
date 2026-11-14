@@ -29,27 +29,17 @@ const navItems = [
       ))}
     </div>
 
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      type="button"
-      class="relative z-[60] flex md:hidden w-8 h-8 items-center justify-center"
-      aria-label="Open menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-      data-menu-button
-    >
-      <span class="sr-only">Open menu</span>
-
-      <span class="flex flex-col gap-[5px] w-5">
-        <span class="block h-px w-full bg-white"></span>
-        <span class="block h-px w-full bg-white"></span>
-      </span>
-    </button>
+    <!-- MOBILE MENU: CSS toggle -->
+    <input id="mobile-menu-toggle" type="checkbox" class="peer sr-only" />
+    <label for="mobile-menu-toggle" class="relative z-[60] flex md:hidden w-8 h-8 items-center justify-center cursor-pointer" aria-label="Toggle menu">
+      <span class="sr-only">Toggle menu</span>
+      <span class="flex flex-col gap-[5px] w-5"><span class="block h-px w-full bg-white"></span><span class="block h-px w-full bg-white"></span></span>
+    </label>
 
     <!-- MOBILE NAV -->
     <div
       id="mobile-menu"
-      class="fixed inset-0 z-50 bg-black opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+      class="fixed inset-0 z-50 bg-black opacity-0 pointer-events-none transition-opacity duration-300 md:hidden peer-checked:opacity-100 peer-checked:pointer-events-auto"
       aria-hidden="true"
       data-mobile-menu
     >
@@ -79,49 +69,3 @@ const navItems = [
   </div>
 </nav>
 
-<script>
-  // Delegated handlers remain reliable across Astro page navigation.
-  if (!window.__scgMobileMenuBound) {
-    window.__scgMobileMenuBound = true;
-
-    const closeMenu = () => {
-      const menu = document.querySelector("[data-mobile-menu]");
-      const button = document.querySelector("[data-menu-button]");
-      if (!menu || !button) return;
-      menu.classList.remove("opacity-100");
-      menu.classList.add("opacity-0", "pointer-events-none");
-      menu.setAttribute("aria-hidden", "true");
-      button.setAttribute("aria-expanded", "false");
-      button.setAttribute("aria-label", "Open menu");
-      document.body.style.overflow = "";
-    };
-
-    const openMenu = () => {
-      const menu = document.querySelector("[data-mobile-menu]");
-      const button = document.querySelector("[data-menu-button]");
-      if (!menu || !button) return;
-      menu.classList.remove("opacity-0", "pointer-events-none");
-      menu.classList.add("opacity-100");
-      menu.setAttribute("aria-hidden", "false");
-      button.setAttribute("aria-expanded", "true");
-      button.setAttribute("aria-label", "Close menu");
-      document.body.style.overflow = "hidden";
-    };
-
-    document.addEventListener("click", (event) => {
-      const target = event.target;
-      if (!(target instanceof Element)) return;
-      const button = target.closest("[data-menu-button]");
-      if (button) {
-        event.preventDefault();
-        button.getAttribute("aria-expanded") === "true" ? closeMenu() : openMenu();
-        return;
-      }
-      if (target.closest("[data-mobile-link]")) closeMenu();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeMenu();
-    });
-  }
-</script>
