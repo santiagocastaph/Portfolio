@@ -9,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
 <!-- ========================================= -->
 <!-- ABOUT EDITORIAL LAYOUT -->
 <section class="about-editorial border-b border-white/15" style="display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);">
-  <div class="about-photo relative min-h-[52svh] md:min-h-[calc(100vh-72px)] bg-black overflow-hidden md:ml-8 lg:ml-12 xl:ml-16 md:my-5 md:mr-5 lg:my-7 lg:mr-7">
+  <div class="about-photo relative min-h-[52svh] md:min-h-[calc(100vh-72px)] bg-black overflow-hidden">
     <img
       src="/about/about-02.jpg"
       alt="Santiago Castañeda operating a cinema camera"
@@ -59,11 +59,11 @@ import Layout from "../layouts/Layout.astro";
 </section>
 
 <style>
-  .about-editorial { display: grid !important; grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important; }
-  .about-photo { position: sticky; top: 0; align-self: start; height: calc(100vh - 56px); min-height: calc(100vh - 56px); }
+  .about-editorial { display: grid !important; grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important; padding: 28px 28px 28px 64px; column-gap: 28px; }
+  .about-photo { position: sticky; top: 28px; align-self: start; height: calc(100vh - 56px); min-height: calc(100vh - 56px); }
   .about-photo img { object-position: 54% center; }
   @media (max-width: 767px) {
-    .about-editorial { grid-template-columns: minmax(0, 1fr) !important; }
+    .about-editorial { grid-template-columns: minmax(0, 1fr) !important; padding: 0; column-gap: 0; }
     .about-photo { position: relative; top: auto; height: 52svh; min-height: 52svh; margin: 0; }
   }
 </style>
