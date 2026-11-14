@@ -79,8 +79,7 @@ import Layout from "../layouts/Layout.astro";
     background: #000;
   }
   .about-photo {
-    position: sticky;
-    top: 40px;
+    position: relative;
     align-self: start;
     grid-column: 2;
     grid-row: 1;
@@ -89,7 +88,7 @@ import Layout from "../layouts/Layout.astro";
     margin: 0 !important;
     width: 100% !important;
   }
-  .about-copy { grid-column: 3; grid-row: 1; .min-height-placeholder { min-height: calc(100vh - 80px); }
+  .about-copy { grid-column: 3; grid-row: 1; }
   .about-photo img { object-position: 35% center; }
   @media (max-width: 767px) {
     .about-editorial {
