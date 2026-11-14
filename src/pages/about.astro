@@ -9,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
 <!-- ========================================= -->
 <!-- ABOUT EDITORIAL LAYOUT -->
 <section class="about-editorial border-b border-white/15" style="display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);">
-  <div class="about-photo relative min-h-[52svh] md:min-h-[calc(100vh-72px)] bg-black overflow-hidden">
+  <div class="about-photo relative min-h-[52svh] md:min-h-[calc(100vh-72px)] bg-black overflow-hidden md:m-5 lg:m-7">
     <img
       src="/about/about-02.jpg"
       alt="Santiago Castañeda operating a cinema camera"
@@ -20,7 +20,7 @@ import Layout from "../layouts/Layout.astro";
     <span class="absolute bottom-5 left-5 md:bottom-8 md:left-8 text-[9px] uppercase tracking-[0.28em] text-white/65">On set · Adelaide</span>
   </div>
 
-  <div class="about-copy flex flex-col px-6 py-8 md:px-9 lg:px-12 md:py-8">
+  <div class="about-copy flex flex-col px-7 py-9 md:px-12 lg:px-16 xl:px-20 md:py-10">
     <div class="flex justify-between items-start mb-10 md:mb-12">
       <span class="text-[10px] uppercase tracking-[0.3em] text-neutral-500">About</span>
       <span class="text-right text-[9px] md:text-[10px] uppercase tracking-[0.2em] leading-relaxed text-neutral-500">Adelaide · Australia</span>
@@ -60,11 +60,11 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   .about-editorial { display: grid !important; grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important; }
-  .about-photo { position: sticky; top: 0; align-self: start; height: 100vh; min-height: 100vh; }
+  .about-photo { position: sticky; top: 0; align-self: start; height: calc(100vh - 56px); min-height: calc(100vh - 56px); }
   .about-photo img { object-position: 54% center; }
   @media (max-width: 767px) {
     .about-editorial { grid-template-columns: minmax(0, 1fr) !important; }
-    .about-photo { position: relative; top: auto; height: 52svh; min-height: 52svh; }
+    .about-photo { position: relative; top: auto; height: 52svh; min-height: 52svh; margin: 0; }
   }
 </style>
 
