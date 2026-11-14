@@ -59,7 +59,7 @@ import Layout from "../layouts/Layout.astro";
 </section>
 
 <style>
-  .about-editorial { display: grid !important; grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important; padding: 60px 60px 60px 150px; column-gap: 56px; }
+  .about-editorial { display: grid !important; grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important; padding: 60px 60px 60px 150px !important; column-gap: 56px; box-sizing: border-box; }
   .about-photo { position: sticky; top: 40px; align-self: start; height: calc(100vh - 80px); min-height: calc(100vh - 80px); }
   .about-photo img { object-position: 54% center; }
   @media (max-width: 767px) {
