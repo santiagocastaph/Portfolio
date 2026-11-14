@@ -21,36 +21,125 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
   <div class="about-copy flex flex-col px-7 py-9 md:px-12 lg:px-16 xl:px-20 md:py-10">
----
-import Layout from "../layouts/Layout.astro";
----
+    <div class="mt-0">
+      <div class="flex items-end justify-between gap-4 mb-4 border-b border-white/20 pb-3">
+        <h2 class="font-serif text-3xl md:text-[2.15rem] tracking-[-0.04em]">Selected Credits</h2>
+        <a href="/credits" class="shrink-0 text-[9px] uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition">View filmography ↗</a>
+      </div>
 
-<Layout title="About | Santiago Castañeda Gomez">
+      <div class="divide-y divide-white/10">
+        <a href="/work/the-hunt-for-the-last-nazis" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-3.5 hover:text-neutral-300 transition">
+          <span class="text-[10px] tabular-nums text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">The Hunt for the Last Nazis</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant · SBS Documentary</span></span>
+        </a>
+        <a href="/work/kheper" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-3 hover:text-neutral-400 transition">
+          <span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Kheper</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Assistant Camera · Short Film</span></span>
+        </a>
+        <a href="/work/lawless-entanglement" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-3.5 hover:text-neutral-300 transition">
+          <span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Lawless Entanglement</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span>
+        </a>
+        <a href="/work/pact-lunch" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-4 hover:text-neutral-400 transition">
+          <span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Pact Lunch</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st AC / Clapper Loader · Short Film</span></span>
+        </a>
+        <a href="/work/odysseed" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-4 hover:text-neutral-400 transition">
+          <span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Odysseed</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Director of Photography · Short Film</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <main class="bg-black text-white">
+<style>
+  .about-editorial {
+    display: grid !important;
+    grid-template-columns: 12px minmax(0, 42fr) minmax(0, 58fr) !important;
+    padding: 60px 60px 60px 0 !important;
+    column-gap: 56px;
+    box-sizing: border-box;
+  }
+  .about-editorial::before {
+    content: "";
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    background: #000;
+  }
+  .about-photo {
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    grid-column: 2;
+    grid-row: 1;
+    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  .about-copy { grid-column: 3; grid-row: 1; }
+  .about-photo img { object-position: 35% center; }
+  @media (max-width: 767px) {
+    .about-editorial {
+      grid-template-columns: minmax(0, 1fr) !important;
+      padding: 0 !important;
+      column-gap: 0;
+    }
+    .about-editorial::before { display: none; }
+    .about-photo {
+      position: relative;
+      top: auto;
+      grid-column: 1;
+      grid-row: 1;
+      height: 52svh;
+      min-height: 52svh;
+      margin: 0 !important;
+      width: 100% !important;
+    }
+    .about-copy { grid-column: 1; grid-row: 2; }
+  }
+</style>
 
+<!-- STATEMENT -->
 <!-- ========================================= -->
-<!-- ABOUT EDITORIAL LAYOUT -->
-<section class="about-editorial border-b border-white/15" style="display:grid;grid-template-columns:12px minmax(0,42fr) minmax(0,58fr);">
-  <div class="about-photo relative min-h-[52svh] md:min-h-[calc(100vh-72px)] bg-black overflow-hidden">
-    <img
-      src="/about/about-02.jpg"
-      alt="Santiago Castañeda operating a cinema camera"
-      class="absolute inset-0 h-full w-full object-cover"
-      fetchpriority="high"
-    />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15"></div>
-    <span class="absolute bottom-5 left-5 md:bottom-8 md:left-8 text-[9px] uppercase tracking-[0.28em] text-white/65">On set · Adelaide</span>
+
+<section class="border-t border-white/15">
+  <div class="max-w-[1500px] mx-auto px-8 py-20 md:py-24">
+
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-20 items-start">
+
+    <!-- PRIMARY STATEMENT -->
+    <div class="md:col-span-7">
+      <p class="font-serif text-4xl md:text-[3.8rem] lg:text-[4rem] leading-[0.98] tracking-[-0.04em]">
+        I work in the camera department, primarily as a 1st AC / Focus Puller,
+        with a background in cinematography, photojournalism and media.
+      </p>
+    </div>
+
+    <!-- CREATIVE STATEMENT -->
+    <div class="md:col-span-5 md:pt-6 lg:pt-8">
+      <p class="font-serif text-2xl md:text-[2.1rem] lg:text-[2.2rem] leading-[1.05] tracking-[-0.025em]">
+        I believe in making art that means something to someone. 
+      </p>
+    </div>
+
   </div>
 
-  <div class="about-copy flex flex-col px-7 py-9 md:px-12 lg:px-16 xl:px-20 md:py-10">
-    <div class="flex justify-between items-start mb-10 md:mb-12">
-      <span class="text-[10px] uppercase tracking-[0.3em] text-neutral-500">About</span>
-      <span class="text-right text-[9px] md:text-[10px] uppercase tracking-[0.2em] leading-relaxed text-neutral-500">Adelaide · Australia</span>
-    </div>
+</div>
+</section>
 
-    <div class="mb-10 md:mb-12">
-      <h1 class="font-serif text-[clamp(2.5rem,3.25vw,3.8rem)] leading-[0.98] tracking-[-0.045em]">Santiago Castañeda</h1>
-      <p class="mt-5 max-w-[34rem] text-[10px] md:text-xs uppercase tracking-[0.16em] leading-[1.8] text-neutral-400">Camera Department <span class="mx-2 text-neutral-700">/</span> 1st AC · Focus Puller</p>
-    </div>
 
+  </main>
+
+
+<style>
+  .selected-credit-row { grid-template-columns: 56px minmax(0, 1fr); }
+  .credit-year { grid-column: 1; grid-row: 1; }
+  .credit-title { grid-column: 2; grid-row: 1; }
+  .credit-role { grid-column: 2; grid-row: 2; }
+  @media (min-width: 768px) {
+    .selected-credit-row { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .credit-year { grid-column: span 1; grid-row: auto; }
+    .credit-title { grid-column: span 5; grid-row: auto; }
+    .credit-role { grid-column: span 3; grid-row: auto; }
+    .credit-type { grid-column: span 3; }
+  }
+</style>
+</Layout>
