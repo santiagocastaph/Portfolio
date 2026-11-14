@@ -84,12 +84,12 @@ import Layout from "../layouts/Layout.astro";
     align-self: start;
     grid-column: 2;
     grid-row: 1;
-    height: calc(100vh - 80px);
-    min-height: calc(100vh - 80px);
+    height: 72vh;
+    min-height: 600px;
     margin: 0 !important;
     width: 100% !important;
   }
-  .about-copy { grid-column: 3; grid-row: 1; min-height: calc(100vh - 80px); }
+  .about-copy { grid-column: 3; grid-row: 1; .min-height-placeholder { min-height: calc(100vh - 80px); }
   .about-photo img { object-position: 35% center; }
   @media (max-width: 767px) {
     .about-editorial {
