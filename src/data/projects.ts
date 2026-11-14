@@ -1036,7 +1036,52 @@ gallery: [
 
     hero: "/films/astray/hero.jpg",
 
-    gallery: [],
+    gallery: [
+      {
+        image: "/films/astray/01.jpg",
+        size: "full",
+      },
+      {
+        image: "/films/astray/02.jpg",
+        size: "right",
+      },
+      {
+        image: "/films/astray/03.jpg",
+        size: "left",
+      },
+      {
+        image: "/films/astray/04.jpg",
+        size: "full",
+      },
+      {
+        image: "/films/astray/05.jpg",
+        size: "left",
+      },
+      {
+        image: "/films/astray/06.jpg",
+        size: "right",
+      },
+      {
+        image: "/films/astray/07.jpg",
+        size: "full",
+      },
+      {
+        image: "/films/astray/08.jpg",
+        size: "right",
+      },
+      {
+        image: "/films/astray/09.jpg",
+        size: "left",
+      },
+      {
+        image: "/films/astray/10.jpg",
+        size: "full",
+      },
+      {
+        image: "/films/astray/11.jpg",
+        size: "right",
+      }
+    ],
     behindTheScenes: [],
     festivals: [],
     awards: [],
