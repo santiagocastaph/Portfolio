@@ -9,9 +9,9 @@ const isHuntForTheLastNazis =
   project.slug === "the-hunt-for-the-last-nazis";
 ---
 
-<section class={`bg-black ${project.slug === "astray" ? "pt-8 pb-8" : "pt-16 pb-12"}`}>
+<section class={`bg-black ${project.slug === "astray" ? "pt-4 pb-4" : "pt-16 pb-12"}`}>
 
-  <div class={`max-w-7xl mx-auto px-8 ${project.slug === "astray" ? "space-y-4" : "space-y-14"}`}>
+  <div class={`max-w-7xl mx-auto px-8 ${project.slug === "astray" ? "space-y-0" : "space-y-14"}`}>
 
     {gallery[0] && (
       <figure class="overflow-hidden">
@@ -28,7 +28,7 @@ const isHuntForTheLastNazis =
     )}
 
     {(gallery[1] || gallery[2]) && (
-      <div class={`grid md:grid-cols-2 ${project.slug === "astray" ? "gap-3" : "gap-8"}`}>
+      <div class={`grid md:grid-cols-2 ${project.slug === "astray" ? "gap-0" : "gap-8"}`}>
 
         {gallery[1] && (
           <figure class="overflow-hidden">
@@ -76,7 +76,7 @@ const isHuntForTheLastNazis =
     )}
 
     {(gallery[4] || gallery[5]) && (
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class={`grid md:grid-cols-2 ${project.slug === "astray" ? "gap-0" : "gap-8"}`}>
 
         {gallery[4] && (
           <figure class="overflow-hidden">
