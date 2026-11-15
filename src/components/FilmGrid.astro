@@ -22,150 +22,70 @@ const mobileProjects = [...mobilePriority.map((slug) => orderedProjects.find((pr
 
           return (
             <div class="space-y-8">
-
-              <!-- FIRST COMPOSITION: 01 + 02/03/04/05 -->
               {group.length > 0 && (
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-
-                  <!-- LARGE PROJECT -->
                   {project(0) && (
                     <article class="group md:col-span-6 flex flex-col min-h-0">
-
                       <div class="border-t border-white/30 pt-2 mb-3">
                         <div class="flex items-center gap-4">
-
-                          <span class="text-[10px] tracking-[0.18em] text-white/50">
-                            {String(groupIndex * 7 + 1).padStart(2, "0")}
-                          </span>
-
-                          <span class="text-[10px] uppercase tracking-[0.18em] text-white/85">
-                            {project(0).title}
-                          </span>
-
-                          <span class="text-[10px] uppercase tracking-[0.18em] text-white/50">
-                            — {project(0).role}
-                          </span>
-
+                          <span class="text-[10px] tracking-[0.18em] text-white/50">{String(groupIndex * 7 + 1).padStart(2, "0")}</span>
+                          <span class="text-[10px] uppercase tracking-[0.18em] text-white/85">{project(0).title}</span>
+                          <span class="text-[10px] uppercase tracking-[0.18em] text-white/50">— {project(0).role}</span>
                         </div>
                       </div>
-
-                      <a
-                        href={`/work/${project(0).slug}`}
-                        class="block overflow-hidden flex-1 min-h-0"
-                      >
-                        <img
-                          src={project(0).hero}
-                          alt={project(0).title}
-                          class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
-                          loading={groupIndex === 0 ? "eager" : "lazy"}
-                        />
+                      <a href={`/work/${project(0).slug}`} class="block overflow-hidden flex-1 min-h-0">
+                        <img src={project(0).hero} alt={project(0).title} class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]" loading={groupIndex === 0 ? "eager" : "lazy"} />
                       </a>
-
                     </article>
                   )}
-
-                  <!-- FOUR SMALL PROJECTS -->
                   {group.length > 1 && (
                     <div class="md:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-
                       {group.slice(1, 5).map((project, smallIndex) => {
                         const index = groupIndex * 7 + smallIndex + 1;
-
                         return (
                           <article class="group min-w-0">
-
                             <div class="border-t border-white/30 pt-2 mb-3">
                               <div class="flex items-center gap-4">
-
-                                <span class="text-[10px] tracking-[0.18em] text-white/50">
-                                  {String(index + 1).padStart(2, "0")}
-                                </span>
-
-                                <span class="text-[10px] uppercase tracking-[0.18em] text-white/85">
-                                  {project.title}
-                                </span>
-
-                                <span class="text-[10px] uppercase tracking-[0.18em] text-white/50">
-                                  — {project.role}
-                                </span>
-
+                                <span class="text-[10px] tracking-[0.18em] text-white/50">{String(index + 1).padStart(2, "0")}</span>
+                                <span class="text-[10px] uppercase tracking-[0.18em] text-white/85">{project.title}</span>
+                                <span class="text-[10px] uppercase tracking-[0.18em] text-white/50">— {project.role}</span>
                               </div>
                             </div>
-
-                            <a
-                              href={`/work/${project.slug}`}
-                              class="block overflow-hidden aspect-[16/10]"
-                            >
-                              <img
-                                src={project.hero}
-                                alt={project.title}
-                                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
-                                loading="lazy"
-                              />
+                            <a href={`/work/${project.slug}`} class="block overflow-hidden aspect-[16/10]">
+                              <img src={project.hero} alt={project.title} class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]" loading="lazy" />
                             </a>
-
                           </article>
                         );
                       })}
-
                     </div>
                   )}
-
                 </div>
               )}
-
-              <!-- SECOND COMPOSITION: 06 + 07 -->
               {group.length > 5 && (
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-
                   {group.slice(5, 7).map((project, bottomIndex) => {
                     const index = groupIndex * 7 + bottomIndex + 5;
-
                     return (
                       <article class="group md:col-span-6 min-w-0">
-
                         <div class="border-t border-white/30 pt-2 mb-3">
                           <div class="flex items-center gap-4">
-
-                            <span class="text-[10px] tracking-[0.18em] text-white/50">
-                              {String(index + 1).padStart(2, "0")}
-                            </span>
-
-                            <span class="text-[10px] uppercase tracking-[0.18em] text-white/85">
-                              {project.title}
-                            </span>
-
-                            <span class="text-[10px] uppercase tracking-[0.18em] text-white/50">
-                              — {project.role}
-                            </span>
-
+                            <span class="text-[10px] tracking-[0.18em] text-white/50">{String(index + 1).padStart(2, "0")}</span>
+                            <span class="text-[10px] uppercase tracking-[0.18em] text-white/85">{project.title}</span>
+                            <span class="text-[10px] uppercase tracking-[0.18em] text-white/50">— {project.role}</span>
                           </div>
                         </div>
-
-                        <a
-                          href={`/work/${project.slug}`}
-                          class={project.slug === "astray" ? "block overflow-hidden aspect-[16/10] relative" : "block overflow-hidden aspect-[16/10]"}
-                        >
-                          <img
-                            src={project.hero}
-                            alt={project.title}
-                            class={project.slug === "astray" ? "absolute inset-0 w-full h-full object-cover scale-[1.25] transition-transform duration-700 ease-out group-hover:scale-[1.3]" : "w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"}
-                            loading="lazy"
-                          />
+                        <a href={`/work/${project.slug}`} class={project.slug === "astray" ? "block overflow-hidden aspect-[16/10] relative" : "block overflow-hidden aspect-[16/10]"}>
+                          <img src={project.hero} alt={project.title} class={project.slug === "astray" ? "absolute inset-0 w-full h-full object-cover scale-[1.25] transition-transform duration-700 ease-out group-hover:scale-[1.3]" : "w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"} loading="lazy" />
                         </a>
-
                       </article>
                     );
                   })}
-
                 </div>
               )}
-
             </div>
           );
         }
       )}
-
     </div>
 
     <!-- MOBILE: independent project sequence -->
@@ -179,8 +99,8 @@ const mobileProjects = [...mobilePriority.map((slug) => orderedProjects.find((pr
               <span class="text-[10px] uppercase tracking-[0.18em] text-white/50">— {project.role}</span>
             </div>
           </div>
-          <a href={`/work/${project.slug}`} class="block overflow-hidden">
-            <img src={project.hero} alt={project.title} class="w-full h-auto object-cover" loading={index === 0 ? "eager" : "lazy"} />
+          <a href={`/work/${project.slug}`} class={project.slug === "astray" ? "block overflow-hidden aspect-[16/10] relative" : "block overflow-hidden"}>
+            <img src={project.hero} alt={project.title} class={project.slug === "astray" ? "absolute inset-0 w-full h-full object-cover scale-[1.25]" : "w-full h-auto object-cover"} loading={index === 0 ? "eager" : "lazy"} />
           </a>
         </article>
       ))}
