@@ -4,76 +4,54 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="About | Santiago Castañeda Gomez">
   <main class="bg-black text-white">
-    <!-- ABOUT -->
+    <!-- PHOTO + SELECTED CREDITS -->
     <section class="about-editorial border-b border-white/15">
       <div class="about-photo relative min-h-[52svh] md:min-h-[calc(100vh-72px)] bg-black overflow-hidden">
-        <img
-          src="/about/about-02.jpg"
-          alt="Santiago Castañeda operating a cinema camera"
-          class="absolute inset-0 h-full w-full object-cover"
-          fetchpriority="high"
-        />
+        <img src="/about/about-02.jpg" alt="Santiago Castañeda operating a cinema camera" class="absolute inset-0 h-full w-full object-cover" fetchpriority="high" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15"></div>
         <span class="absolute bottom-5 left-5 md:bottom-8 md:left-8 text-[9px] uppercase tracking-[0.28em] text-white/65">On set · Adelaide</span>
       </div>
 
-      <div class="about-copy flex flex-col justify-center px-7 py-12 md:px-12 lg:px-16 xl:px-20 md:py-16">
-        <p class="section-label mb-8">About</p>
-        <div class="space-y-6 max-w-xl">
-          <p class="font-serif text-2xl md:text-[2rem] leading-[1.12] tracking-[-0.035em]">
-            I'm Santiago Castañeda Gómez, a Colombian cinematographer based in Adelaide, Australia.
-          </p>
-          <p class="text-sm md:text-[15px] leading-[1.8] text-neutral-300">
-            My background in photojournalism taught me to look beyond the image — towards the people, moments and stories that give it meaning.
-          </p>
-          <p class="text-sm md:text-[15px] leading-[1.8] text-neutral-300">
-            Today, I work in the camera department as a First Assistant Camera and Focus Puller, constantly learning from the craft and the people behind every film.
-          </p>
-          <p class="text-sm md:text-[15px] leading-[1.8] text-neutral-300">
-            I approach every project with curiosity, commitment and the willingness to give everything the story asks of me.
-          </p>
-        </div>
-
-        <!-- EDUCATION -->
-        <div class="education mt-14 md:mt-16 border-t border-white/15 pt-5">
-          <p class="section-label mb-5">Education</p>
-          <div class="space-y-4 text-xs md:text-[13px] leading-relaxed">
-            <div class="flex flex-col sm:flex-row sm:justify-between sm:gap-6">
-              <span class="text-neutral-300">Master of Media and Communication (Screen Production)</span>
-              <span class="text-neutral-500 sm:text-right">Flinders University · 2024</span>
-            </div>
-            <div class="flex flex-col sm:flex-row sm:justify-between sm:gap-6">
-              <span class="text-neutral-300">Bachelor of Journalism</span>
-              <span class="text-neutral-500 sm:text-right">Colombia · 2018</span>
-            </div>
-            <div class="flex flex-col sm:flex-row sm:justify-between sm:gap-6">
-              <span class="text-neutral-300">Diploma in Professional Photography</span>
-              <span class="text-neutral-500 sm:text-right">Colombia · 2012</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SELECTED CREDITS -->
-    <section class="selected-credits border-b border-white/15">
-      <div class="max-w-[1500px] mx-auto px-7 py-16 md:px-12 md:py-20 lg:px-16">
+      <div class="credits-copy px-7 py-10 md:px-10 lg:px-14 md:py-12">
         <div class="flex items-end justify-between gap-4 mb-4 border-b border-white/20 pb-3">
           <h2 class="font-serif text-3xl md:text-[2.15rem] tracking-[-0.04em]">Selected Credits</h2>
           <a href="/credits" class="shrink-0 text-[9px] uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition">View full credits ↗</a>
         </div>
-
         <div class="divide-y divide-white/10">
-          <a href="/credits" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">The Hunt for the Last Nazis</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant / Camera Operator · Documentary</span></span></a>
-          <a href="/credits" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">IKU</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span></a>
-          <a href="/credits" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">Peter Drew — Aussie Posters</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant · Promo Video</span></span></a>
-          <a href="/credits" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">My Kitchen Rules</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant · TV Show</span></span></a>
-          <a href="/credits" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">Real Estate Commercial</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">2nd Camera Assistant · TVC</span></span></a>
-          <a href="/work/astray" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Astray</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span></a>
-          <a href="/credits" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Items Objects and Things</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span></a>
-          <a href="/work/lawless-entanglement" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Lawless Entanglement</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span></a>
-          <a href="/work/kheper" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Kheper</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Assistant Camera · Short Film</span></span></a>
-          <a href="/credits" class="about-credit-row group grid grid-cols-[36px_1fr] gap-x-3 py-5 md:py-6 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">Seima</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Operator · Corporate Video</span></span></a>
+          <a href="/credits" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">The Hunt for the Last Nazis</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant / Camera Operator · Documentary</span></span></a>
+          <a href="/credits" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">IKU</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span></a>
+          <a href="/credits" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">Peter Drew — Aussie Posters</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant · Promo Video</span></span></a>
+          <a href="/credits" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">My Kitchen Rules</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant · TV Show</span></span></a>
+          <a href="/credits" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">Real Estate Commercial</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">2nd Camera Assistant · TVC</span></span></a>
+          <a href="/work/astray" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Astray</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span></a>
+          <a href="/credits" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Items Objects and Things</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span></a>
+          <a href="/work/lawless-entanglement" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Lawless Entanglement</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Camera Assistant · Short Film</span></span></a>
+          <a href="/work/kheper" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span><span class="block text-xs uppercase tracking-[0.12em]">Kheper</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Assistant Camera · Short Film</span></span></a>
+          <a href="/credits" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-4 md:py-5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span><span class="block text-xs uppercase tracking-[0.12em]">Seima</span><span class="mt-1 block text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Operator · Corporate Video</span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIO + EDUCATION -->
+    <section class="about-bio border-b border-white/15">
+      <div class="max-w-[1500px] mx-auto px-7 py-16 md:px-12 md:py-24 lg:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
+          <div class="md:col-span-2"><p class="section-label">About</p></div>
+          <div class="md:col-span-7 space-y-6 max-w-3xl">
+            <p class="font-serif text-3xl md:text-[2.65rem] leading-[1.08] tracking-[-0.04em]">I'm Santiago Castañeda Gómez, a Colombian cinematographer based in Adelaide, Australia.</p>
+            <p class="text-sm md:text-[15px] leading-[1.8] text-neutral-300">My background in photojournalism taught me to look beyond the image — towards the people, moments and stories that give it meaning.</p>
+            <p class="text-sm md:text-[15px] leading-[1.8] text-neutral-300">Today, I work in the camera department as a First Assistant Camera and Focus Puller, constantly learning from the craft and the people behind every film.</p>
+            <p class="text-sm md:text-[15px] leading-[1.8] text-neutral-300">I approach every project with curiosity, commitment and the willingness to give everything the story asks of me.</p>
+          </div>
+        </div>
+
+        <div class="education grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mt-16 md:mt-24 border-t border-white/15 pt-6">
+          <div class="md:col-span-2"><p class="section-label">Education</p></div>
+          <div class="md:col-span-10 space-y-4 text-xs md:text-[13px] leading-relaxed">
+            <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-1 sm:gap-6"><span class="text-neutral-300">Master of Media and Communication (Screen Production)</span><span class="text-neutral-500 sm:text-right">Flinders University · 2024</span></div>
+            <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-1 sm:gap-6"><span class="text-neutral-300">Bachelor of Journalism</span><span class="text-neutral-500 sm:text-right">Colombia · 2018</span></div>
+            <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-1 sm:gap-6"><span class="text-neutral-300">Diploma in Professional Photography</span><span class="text-neutral-500 sm:text-right">Colombia · 2012</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -87,36 +65,14 @@ import Layout from "../layouts/Layout.astro";
       column-gap: 56px;
       box-sizing: border-box;
     }
-    .about-photo {
-      grid-column: 1;
-      grid-row: 1;
-      align-self: stretch;
-      min-height: 0;
-      height: 100%;
-      margin: 0 !important;
-      width: 100% !important;
-    }
-    .about-copy { grid-column: 2; grid-row: 1; }
+    .about-photo { grid-column: 1; grid-row: 1; align-self: stretch; min-height: 0; height: 100%; margin: 0 !important; width: 100% !important; }
+    .credits-copy { grid-column: 2; grid-row: 1; }
     .about-photo img { object-position: 35% center; }
-    .section-label {
-      font-size: 9px;
-      text-transform: uppercase;
-      letter-spacing: .24em;
-      color: rgb(115 115 115);
-    }
+    .section-label { font-size: 9px; text-transform: uppercase; letter-spacing: .24em; color: rgb(115 115 115); }
     @media (max-width: 767px) {
-      .about-editorial {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 0;
-        column-gap: 0;
-      }
-      .about-photo {
-        grid-column: 1;
-        grid-row: 1;
-        height: 52svh;
-        min-height: 52svh;
-      }
-      .about-copy { grid-column: 1; grid-row: 2; }
+      .about-editorial { grid-template-columns: minmax(0, 1fr); padding: 0; column-gap: 0; }
+      .about-photo { grid-column: 1; grid-row: 1; height: 52svh; min-height: 52svh; }
+      .credits-copy { grid-column: 1; grid-row: 2; }
     }
   </style>
 </Layout>
