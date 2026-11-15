@@ -1,8 +1,17 @@
-import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import FilmGrid from "../components/FilmGrid.astro";
 ---
 
-<Layout title="Motion | Santiago Castañeda Gomez">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion | Santiago Castañeda Gomez</title>
+  </head>
+  <body class="bg-black text-white">
+    <Navbar />
 
   <main class="bg-black text-white min-h-screen">
 
@@ -18,4 +27,6 @@ import FilmGrid from "../components/FilmGrid.astro";
 
   </main>
 
-</Layout>
+    <Footer />
+  </body>
+</html>
