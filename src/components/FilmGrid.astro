@@ -180,7 +180,7 @@ const mobileProjects = [...mobilePriority.map((slug) => orderedProjects.find((pr
             </div>
           </div>
           <a href={`/work/${project.slug}`} class="block overflow-hidden">
-            <img src={project.hero} alt={project.title} class={project.slug === "the-hunt-for-the-last-nazis" ? "w-full aspect-[4/3] object-cover" : "w-full h-auto object-cover"} loading={index === 0 ? "eager" : "lazy"} />
+            <img src={project.hero} alt={project.title} class="w-full h-auto object-cover" loading={index === 0 ? "eager" : "lazy"} />
           </a>
         </article>
       ))}
