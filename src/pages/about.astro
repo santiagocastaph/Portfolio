@@ -13,9 +13,9 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <div class="credits-copy px-7 py-10 md:px-10 lg:px-14 md:py-12">
-        <div class="flex items-end justify-between gap-4 mb-4 border-b border-white/20 pb-3">
+        <div class="credits-heading mb-4 border-b border-white/20 pb-3">
           <h2 class="font-serif text-3xl md:text-[2.15rem] tracking-[-0.04em]">Selected Credits</h2>
-          <a href="/credits" class="shrink-0 text-[9px] uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition">View full credits ↗</a>
+
         </div>
         <div class="divide-y divide-white/10">
           <a href="/credits" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-3 md:py-3.5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><span class="text-xs uppercase tracking-[0.12em]">The Hunt for the Last Nazis</span><span class="text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Assistant / Camera Operator · Documentary</span></span></a>
@@ -29,6 +29,7 @@ import Layout from "../layouts/Layout.astro";
           <a href="/work/kheper" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-3 md:py-3.5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">25</span><span class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><span class="text-xs uppercase tracking-[0.12em]">Kheper</span><span class="text-[9px] uppercase tracking-[0.16em] text-neutral-500">1st Assistant Camera · Short Film</span></span></a>
           <a href="/credits" class="about-credit-row group grid grid-cols-[30px_1fr] gap-x-3 py-3 md:py-3.5 hover:text-neutral-300 transition"><span class="text-[10px] text-neutral-600">26</span><span class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><span class="text-xs uppercase tracking-[0.12em]">Seima</span><span class="text-[9px] uppercase tracking-[0.16em] text-neutral-500">Camera Operator · Corporate Video</span></span></a>
         </div>
+        <div class="credits-footer"><a href="/credits">View Full Credits ↗</a></div>
       </div>
     </section>
 
@@ -68,11 +69,11 @@ import Layout from "../layouts/Layout.astro";
       box-sizing: border-box;
     }
     .about-photo { grid-column: 1; grid-row: 1; align-self: stretch; min-height: 0; height: 100%; margin: 0 0 0 36px !important; width: calc(100% - 36px) !important; }
-    .credits-copy { grid-column: 2; grid-row: 1; margin-left: -18px; }
+    .credits-copy { grid-column: 2; grid-row: 1; margin-left: -18px; }\n    .credits-footer { display: flex; justify-content: flex-end; margin-top: 28px; }\n    .credits-footer a { font-family: inherit; font-size: 9px; text-transform: uppercase; letter-spacing: .2em; color: rgb(115 115 115); transition: color .2s; }\n    .credits-footer a:hover { color: white; }
     .about-photo img { object-position: 35% center; }
     .section-label { font-size: 9px; text-transform: uppercase; letter-spacing: .24em; color: rgb(115 115 115); }
     @media (max-width: 767px) {
-       .about-editorial { grid-template-columns: minmax(0, 1fr); max-width: none; padding: 0; column-gap: 0; }\n      .about-photo { margin: 0 !important; width: 100% !important; }\n      .credits-copy { margin-left: 0; }
+       .about-editorial { grid-template-columns: minmax(0, 1fr); max-width: none; padding: 0; column-gap: 0; }\n      .about-photo { margin: 0 !important; width: 100% !important; }\n      .credits-copy { margin-left: 0; }\n      .credits-footer { margin-top: 24px; }
       .about-photo { grid-column: 1; grid-row: 1; height: 52svh; min-height: 52svh; }
       .credits-copy { grid-column: 1; grid-row: 2; }
     }
