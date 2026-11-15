@@ -60,19 +60,19 @@ import Layout from "../layouts/Layout.astro";
   <style>
      .about-editorial {
       display: grid;
-      grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+      grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
       max-width: 1600px;
       margin-inline: auto;
-      padding: 100px 64px 60px 110px;
-      column-gap: 56px;
+      padding: 100px 100px 60px 150px;
+      column-gap: 36px;
       box-sizing: border-box;
     }
-    .about-photo { grid-column: 1; grid-row: 1; align-self: stretch; min-height: 0; height: 100%; margin: 0 !important; width: 100% !important; }
-    .credits-copy { grid-column: 2; grid-row: 1; }
+    .about-photo { grid-column: 1; grid-row: 1; align-self: stretch; min-height: 0; height: 100%; margin: 0 0 0 36px !important; width: calc(100% - 36px) !important; }
+    .credits-copy { grid-column: 2; grid-row: 1; margin-left: -18px; }
     .about-photo img { object-position: 35% center; }
     .section-label { font-size: 9px; text-transform: uppercase; letter-spacing: .24em; color: rgb(115 115 115); }
     @media (max-width: 767px) {
-       .about-editorial { grid-template-columns: minmax(0, 1fr); max-width: none; padding: 0; column-gap: 0; }
+       .about-editorial { grid-template-columns: minmax(0, 1fr); max-width: none; padding: 0; column-gap: 0; }\n      .about-photo { margin: 0 !important; width: 100% !important; }\n      .credits-copy { margin-left: 0; }
       .about-photo { grid-column: 1; grid-row: 1; height: 52svh; min-height: 52svh; }
       .credits-copy { grid-column: 1; grid-row: 2; }
     }
