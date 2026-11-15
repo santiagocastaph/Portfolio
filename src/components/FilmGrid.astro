@@ -1,11 +1,14 @@
 ---
 import { orderedProjects } from "../data/projects";
+
+const mobilePriority = ["kheper", "the-hunt-for-the-last-nazis", "astray", "items-objects-and-things", "lawless-entanglement", "pact-lunch", "lucid-dreaming", "i-could-hurt-a-fly"];
+const mobileProjects = [...mobilePriority.map((slug) => orderedProjects.find((project) => project.slug === slug)!), ...orderedProjects.filter((project) => !mobilePriority.includes(project.slug))];
 ---
 
 <section class="bg-black px-6 md:px-8 py-10 md:py-14">
   <div class="mx-auto max-w-[1600px]">
 
-    <div class="space-y-10 md:space-y-14">
+    <div class="space-y-10 md:space-y-14 hidden md:block">
 
       {Array.from(
         { length: Math.ceil(orderedProjects.length / 7) },
@@ -163,6 +166,24 @@ import { orderedProjects } from "../data/projects";
         }
       )}
 
+    </div>
+
+    <!-- MOBILE: independent project sequence -->
+    <div class="md:hidden space-y-9">
+      {mobileProjects.map((project, index) => (
+        <article class="group">
+          <div class="border-t border-white/30 pt-2 mb-3">
+            <div class="flex items-baseline gap-3">
+              <span class="text-[10px] tracking-[0.18em] text-white/50">{String(index + 1).padStart(2, "0")}</span>
+              <span class="text-[10px] uppercase tracking-[0.18em] text-white/85">{project.title}</span>
+              <span class="text-[10px] uppercase tracking-[0.18em] text-white/50">— {project.role}</span>
+            </div>
+          </div>
+          <a href={`/work/${project.slug}`} class="block overflow-hidden">
+            <img src={project.hero} alt={project.title} class="w-full h-auto object-cover" loading={index === 0 ? "eager" : "lazy"} />
+          </a>
+        </article>
+      ))}
     </div>
 
   </div>
