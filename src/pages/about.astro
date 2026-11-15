@@ -58,10 +58,12 @@ import Layout from "../layouts/Layout.astro";
   </main>
 
   <style>
-    .about-editorial {
+     .about-editorial {
       display: grid;
       grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
-      padding: 140px 60px 60px 0;
+      max-width: 1600px;
+      margin-inline: auto;
+      padding: 100px 64px 60px;
       column-gap: 56px;
       box-sizing: border-box;
     }
@@ -70,7 +72,7 @@ import Layout from "../layouts/Layout.astro";
     .about-photo img { object-position: 35% center; }
     .section-label { font-size: 9px; text-transform: uppercase; letter-spacing: .24em; color: rgb(115 115 115); }
     @media (max-width: 767px) {
-      .about-editorial { grid-template-columns: minmax(0, 1fr); padding: 0; column-gap: 0; }
+       .about-editorial { grid-template-columns: minmax(0, 1fr); max-width: none; padding: 0; column-gap: 0; }
       .about-photo { grid-column: 1; grid-row: 1; height: 52svh; min-height: 52svh; }
       .credits-copy { grid-column: 1; grid-row: 2; }
     }
